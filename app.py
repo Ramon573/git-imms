@@ -3,101 +3,99 @@
 
 
 # Importar flask
-from flask import Flask, render_template, request
+import sys
+from flask import Flask, render_template, request, session
+import models.database_model as datamodel
 
+db = datamodel.database('localhost','root','Adonispili2','imss_035')
 app = Flask(__name__)  # Creamos unas instancia de Flask
+
+
+
+
+
 
 # Creacion de rutas URLS
 
-
-def checkLogin(name, password):
-    if name == "admin" and password == "123":
-        return "El usuario es correcto"
-    else:
-        return "Los datos del usuario son incorrectos"
-
-
 # Definimos nuestro pirmer endPoint para nuestra API de python (url raiz)
+
+
+
 @app.route("/")
 def index():
-
-    titulo = "Proyecto de prueba"
-    return render_template('Index.html', titulo=titulo)
-
-
-@app.route("/form")
-def form():
-    titulo = "Login de prueba"
-    return render_template('form.html', titulo=titulo)
-
-
-@app.route("/login", methods= ['POST', 'GET'])
+    titulo = "Pagina Principal"
+  
+    try: 
+        db.connection()
+        print ('La conexion es exictosa')
+    except:
+        print ('Sigue sin jalar esta madre')
+    return render_template('login.html', titulo = titulo)
+   
+    
+@app.route("/login", methods =["POST"])
 def login():
-    # If user == "admin"
-    # If pass == "123456" 
-    # Recibir el tipo de metodo -> request.method
-    #titulo = "Login"
-    if request.method == 'POST':
-        # _userData : {
-        #     user:request.form['user'],
-        #     password:request.form['pass']
-        # }
-        # base de datos: 
-        # Select * from users where user =  _user
-        # si existe, seguimos, sino, mandamos un error diciendo que no existe
-        # password == _pass --> Simón, estas autorizado. Return render_template('home.html')
 
-        _user = request.form['user']
-        _pass = request.form['pass']
-        print(_user, _pass)
-        # If usuario == "admin" -> Correct
-        # if password == "123" --> Correct
-        # return index.html, usuario 
-        # Bienvenido {{ usuario }}
+    if request.method == "POST":
+        db.connection()
        
-        try:
-            result = checkLogin(_user, _pass)   
-            print(result)      
-            return render_template('index.html', user = _user)
-        except:
+    return('OK')        
 
-            return "Algo sucedio durante el login"
-    else:
-        return render_template("login.html")
-            
+        
+        
+
+        
+        
+
         
             
 
+         
+    
+# @app.route("/form")
+# def form():
+#     titulo = "Login de prueba"
+#     return render_template('form.html', titulo=titulo)
+
+
+# @app.route("/DatosEncuestador", methods =['POST','GET'])
+# def DatosEmpleado():
+#     #titulo = "DatosEncuestado"
+#     if request.method == 'POST':
+#         _NombreEncuestador = request.form['NombreEncuestador']
+#         _Empresa = request.form['Empresa']
+#         _Direccion = request.form['Direccion']
+#         _Colonia = request.form['Colonia']
+#         _Ciudad = request.form['Ciudad']
+#         _Estado = request.form['Estado']
+#         _Fax = request.form['Fax']
+#         _rfc = request.form['rfc']
+
+#         print(_NombreEncuestador, _Empresa, _Direccion, _Colonia, _Ciudad, _Estado, _Fax, _rfc)
         
-    
-    
-    
-    
+        
 
-
-@app.route("/DatosEncuestador")
-def DatosEmpleado():
-    titulo = "DatosEncuestado"
-    return render_template('DatosEncuestador.html', titulo=titulo)
+#     else: 
+#         return render_template('DatosEncuestador.html')
 
 
 
-@app.route("/encuesta1P1")
-def encuesta1P1():
-    titulo = "Encuesta1P1"
-    return render_template('encuesta1P1.html', titulo = titulo)
+# @app.route("/encuesta1P1")
+# def encuesta1P1():
+#     titulo = "Encuesta1P1"
+#     return render_template('encuesta1P1.html', titulo = titulo)
 
 
-@app.route("/encuesta1P2")
-def encuesta1P2():
-    titulo = "Encuesta1P2"
-    return render_template('encuesta1P2.html', titulo = titulo)
+# @app.route("/encuesta1P2")
+# def encuesta1P2():
+#     titulo = "Encuesta1P2"
+#     return render_template('encuesta1P2.html', titulo = titulo)
 
 
-@app.route("/encuesta2P1")
-def encuesta2P1():
-    titulo = "Encuesta2P1"
-    return render_template('encuesta2P1.html', titulo = titulo)
+# @app.route("/encuesta2P1")
+# def encuesta2P1():
+#     titulo = "Encuesta2P1"
+#     return render_template('encuesta2P1.html', titulo = titulo)
     
 
 
