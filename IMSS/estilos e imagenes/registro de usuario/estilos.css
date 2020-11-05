@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+  background-image: url('nueevo.png');
+}
+
+  .form-registro {
+    width: 35%;
+    background: #3b4652;
+    padding: 30px;
+    margin: auto;
+    margin-top: -15px;
+    border-radius: 8px;
+    font-family: 'calibri';
+    color: white;
+    
+    
+
+}
+
+
+
+ .campos {
+    width: 100%;
+    background: #FFFFFF;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+    padding-left: 45px;
+    
+    
+  }
+
+  .form-registro h4{
+
+    margin-top: 30px;
+  }
+
+  .form-registro .boton {
+    width: 100%;
+    background: #05386B;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 80%;
+   
+  }
+  .boton:hover{
+    background-color: #0036ac;
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, -5);
+  }
+
+
+  .form-registro .boton1 {
+    width: 100%;
+    background: #05386B;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 80%;
+    margin-top: -10;
+  }
+  .boton1:hover{
+    background-color: #0036ac;
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, -5);
+  }
+
+
+  .contenedor{
+    width: 100%;
+    max-width: 1000px;
+    margin:0  auto;
+    overflow: hidden; 
+
+  }
+  @media (max-width: 1024px){
+    .form-registro{
+      width: 90%;
+    }
+
+  }
+
+  
+  .icono{
+    width: 90px;
+    display: block;
+    margin:  auto;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    
+  
+  }
+
+  .form-group::before{
+        
+    font-family: "Font Awesome\ 5 Free";
+    position: absolute;
+    color: black;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 22px;
+
+  }
+
+  .form-group#nombre-group::before{
+
+      content: "\f573";
+     
+  }
+
+  .form-group#usuario-group::before{
+
+    content: "\f007";
+   
+}
+
+.form-group#correo-group::before{
+
+  content: "\f0e0";
+  
+}
+
+.form-group#contraseña-group::before{
+
+  content: "\f023";
+  
+}
+
+.form-group#contraseña1-group::before{
+
+  content: "\f023";
+ 
+}

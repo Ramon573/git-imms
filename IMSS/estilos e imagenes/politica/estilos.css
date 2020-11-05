@@ -1,0 +1,91 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #f2f2f2;
+	font-family: 'Oswald', sans-serif;
+}
+
+.contenedor {
+	width: 90%;
+	height: 600px;
+	margin: 100px auto;
+	padding: 20px;
+	background: #fff;
+	overflow: auto;
+	font-family: 'Open Sans';
+	border-radius: 4px;
+	margin-top: -100px;
+	padding-top: 150px;
+}
+
+.contenedor h1 {
+	font-size: 60px;
+	font-weight: 600;
+	color: #6386A9;
+}
+
+.contenedor hr {
+	background: #000000;
+	width: 104%;
+	height: 4px;
+	border: none;
+	margin: 20px 0;
+	border-radius: 50px;
+}
+
+p {
+	margin-bottom: 20px;
+	line-height: 28px;
+	font-size: 16px;
+	color: #414141;
+}
+
+
+
+.contenedor::-webkit-scrollbar {
+	width: 10px;
+}
+
+.contenedor::-webkit-scrollbar-thumb {
+	background: #C6BEBE;
+	border-radius: 10px;
+}
+
+body{ 
+    background-image: url('nueevo.png');
+  }
+
+  
+  .botons{
+  width: 13%;
+  background: #1f53c5;
+  color: white;
+  margin: 16px 40;
+  font-size: 13px;
+  margin-top: 20px;
+ }
+ .botons:hover{
+    background-color: #0036ac;
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, -5);
+  }
+
+
+ .contenedor2{
+    width: 80%;
+    max-width: 1000px;
+    margin:0  auto;
+    overflow: hidden; 
+
+
+  }
+
+  @media (max-width: 1024px){
+    .contenedor{
+      width: 100%;
+    }
+
+  }
