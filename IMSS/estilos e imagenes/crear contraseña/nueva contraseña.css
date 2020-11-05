@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-image: url('nueevo.png');
+  }
+
+  
+
+  .form-contraseña h5 {
+    
+    font-size: 22px;
+    margin-bottom: 30px;
+    padding-top: 40px;
+    
+  }
+
+  .form-contraseña {
+    width: 35%;
+    background: #3b4652;
+    padding: 20px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 8px;
+    font-family: 'calibri';
+    color: white;
+    opacity: .95;
+    
+  }
+
+  .contenedor{
+    width: 80%;
+    max-width: 1000px;
+    margin:0  auto;
+    overflow: hidden; 
+
+  }
+
+  
+.control {
+    width: 90%;
+    background: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 40px;
+    border: 3px solid #b9b9b9;
+    font-family: 'calibri';
+    font-size: 20px;
+    color: black;
+    padding-left: 40px;
+    margin-left: 10px;
+    
+    }
+
+  .control1 {
+    width: 90%;
+    background: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 40px;
+    border: 3px solid #b9b9b9;
+    font-family: 'calibri';
+    font-size: 20px;
+    color: black;
+    padding-left: 40px;
+    margin-top: -20px;
+    margin-left: 10px;
+    
+  }
+
+  .form-contraseña .boton {
+    width: 70%;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 50px;
+  }
+
+  
+  .form-contraseña .boton1 {
+    width: 70%;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    margin-top: -10px;
+    margin-left: 50px;
+  }
+  .boton:hover{
+    background-color: #0036ac;
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, -5);
+  }
+
+  .boton1:hover{
+    background-color: #0036ac;
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, -5);
+  }
+
+  
+  
+
+  @media (max-width: 1000px){
+    .form-contraseña{
+      width: 100%;
+      
+      
+    }
+    
+
+  }
+
+  
+  
+
+
+  .form-group::before{
+        
+    font-family: "Font Awesome\ 5 Free";
+    position: absolute;
+    margin-left: 20px;
+     color: black;
+     font-size: 22px;
+    
+    
+
+  }
+
+
+  .form-group#user-group::before{
+
+    content: "\f023";
+    
+   
+    
+   
+  }
+
+  .form-group#confirmar-group::before{
+
+    content: "\f023";
+   
+    
+    
+   
+  }
+
+  .candado{
+    width: 100px;
+
+  margin-top: -430px;
+  }
+
+  .linea{
+    width: 350px;
+   height: 100px;
+   margin-top: -180px;
+   margin-left: -20px;
+   
+
+  }
